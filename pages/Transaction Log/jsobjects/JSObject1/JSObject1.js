@@ -46,7 +46,7 @@ export default {
 				});
 
 				try {
-					await qy_uploadData.run({
+					await qy_uploadData2.run({
 						barcode: row.barcode,
 						time: row.time,
 						date: row.date,
