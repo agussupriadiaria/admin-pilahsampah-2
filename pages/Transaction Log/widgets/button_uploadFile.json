@@ -25,7 +25,7 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 48,
   "needsErrorInfo": false,
-  "onClick": "{{JSObject1.uploadCSVtoMySQL();}}",
+  "onClick": "{{JSObject2.uploadCSVtoMySQL();}}",
   "originalBottomRow": 78,
   "originalTopRow": 74,
   "parentColumnSpace": 17.9375,
