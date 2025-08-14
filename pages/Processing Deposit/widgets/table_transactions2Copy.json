@@ -33,15 +33,15 @@
   },
   "columnOrder": [
     "no",
-    "username",
     "transactioncode",
     "item",
     "amount",
     "status",
     "inputdate",
-    "transactiondate"
+    "transactiondate",
+    "user_id"
   ],
-  "columnUpdatedAt": 1753975094328,
+  "columnUpdatedAt": 1755175905051,
   "columnWidthMap": {
     "customColumn1": 60,
     "no": 60
@@ -72,9 +72,6 @@
       "key": "primaryColumns.no.computedValue"
     },
     {
-      "key": "primaryColumns.username.computedValue"
-    },
-    {
       "key": "primaryColumns.transactioncode.computedValue"
     },
     {
@@ -91,6 +88,9 @@
     },
     {
       "key": "primaryColumns.transactiondate.computedValue"
+    },
+    {
+      "key": "primaryColumns.user_id.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -364,18 +364,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "username": {
-      "alias": "username",
+    "user_id": {
+      "alias": "user_id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = table_transactions2Copy.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"username\"])) :  currentRow[\"username\"] })()}}",
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = table_transactions2Copy.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"user_id\"])) : user_id })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "username",
+      "id": "user_id",
       "index": 1,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -385,10 +387,11 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "username",
+      "label": "user_id",
       "notation": "standard",
-      "originalId": "username",
+      "originalId": "user_id",
       "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -402,7 +405,7 @@
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{qy_viewDepositInvalid.data}}",
+  "tableData": "{{qy_viewDepositInvalid2.data}}",
   "textSize": "0.875rem",
   "topRow": 116,
   "totalRecordsCount": "",
