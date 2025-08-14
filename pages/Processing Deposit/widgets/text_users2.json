@@ -4,7 +4,7 @@
   "borderColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "",
-  "bottomRow": 69,
+  "bottomRow": 124,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -36,8 +36,8 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 69,
-  "originalTopRow": 65,
+  "originalBottomRow": 124,
+  "originalTopRow": 120,
   "overflow": "NONE",
   "parentColumnSpace": 17.9375,
   "parentId": "0",
@@ -49,7 +49,7 @@
   "text": "Deposit Success",
   "textAlign": "LEFT",
   "textColor": "{{appsmith.theme.colors.primaryColor}}",
-  "topRow": 65,
+  "topRow": 120,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
