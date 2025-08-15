@@ -34,14 +34,18 @@
   "columnOrder": [
     "entry_id",
     "user_id",
-    "number_value",
-    "date_value",
     "username",
     "transaction_type",
+    "point",
+    "transaction_date",
+    "date_created",
     "user_ip"
   ],
-  "columnUpdatedAt": 1755179833549,
-  "columnWidthMap": {},
+  "columnUpdatedAt": 1755220016378,
+  "columnWidthMap": {
+    "transaction_date": 176,
+    "transaction_type": 181
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -70,12 +74,6 @@
       "key": "primaryColumns.user_id.computedValue"
     },
     {
-      "key": "primaryColumns.number_value.computedValue"
-    },
-    {
-      "key": "primaryColumns.date_value.computedValue"
-    },
-    {
       "key": "primaryColumns.username.computedValue"
     },
     {
@@ -83,6 +81,15 @@
     },
     {
       "key": "primaryColumns.user_ip.computedValue"
+    },
+    {
+      "key": "primaryColumns.point.computedValue"
+    },
+    {
+      "key": "primaryColumns.transaction_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.date_created.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -118,21 +125,21 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "date_value": {
-      "alias": "date_value",
+    "date_created": {
+      "alias": "date_created",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "date",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"date_value\"])) : date_value })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"date_created\"])) : date_created })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "date_value",
-      "index": 3,
+      "id": "date_created",
+      "index": 4,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -141,9 +148,10 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "date_value",
+      "label": "date_created",
       "notation": "standard",
-      "originalId": "date_value",
+      "originalId": "date_created",
+      "outputFormat": "DD/MM/YYYY",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -186,20 +194,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "number_value": {
-      "alias": "number_value",
+    "point": {
+      "alias": "point",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"number_value\"])) : number_value })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"point\"])) : point })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "number_value",
+      "id": "point",
       "index": 2,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -209,9 +217,45 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "number_value",
+      "label": "point",
       "notation": "standard",
-      "originalId": "number_value",
+      "originalId": "point",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "transaction_date": {
+      "alias": "transaction_date",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "date",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"transaction_date\"])) : transaction_date })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "transaction_date",
+      "index": 3,
+      "inputFormat": "DD/MM/YYYY",
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "transaction_date",
+      "notation": "standard",
+      "originalId": "transaction_date",
+      "outputFormat": "DD/MM/YYYY",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

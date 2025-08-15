@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    e.entry_id,\n    MAX(CASE WHEN e.meta_key = 'hidden-1' THEN e.meta_value END) AS user_id,\n    MAX(CASE WHEN e.meta_key = 'number-1' THEN e.meta_value END) AS number_value,\n    MAX(CASE WHEN e.meta_key = 'date-1' THEN e.meta_value END) AS date_value,\n    MAX(CASE WHEN e.meta_key = 'hidden-2' THEN e.meta_value END) AS username,\n    MAX(CASE WHEN e.meta_key = 'hidden-3' THEN e.meta_value END) AS transaction_type,\n    MAX(CASE WHEN e.meta_key = '_forminator_user_ip' THEN e.meta_value END) AS user_ip\nFROM wp_frmt_form_entry_meta e\nGROUP BY e.entry_id\nORDER BY e.entry_id;",
+      "body": "SELECT \n    e.entry_id,\n    MAX(CASE WHEN e.meta_key = 'hidden-1' THEN e.meta_value END) AS user_id,\n    MAX(CASE WHEN e.meta_key = 'number-1' THEN e.meta_value END) AS point,\n    MAX(CASE WHEN e.meta_key = 'date-1' THEN e.meta_value END) AS transaction_date,\n\t\tMAX(e.date_created) AS date_created,\n    MAX(CASE WHEN e.meta_key = 'hidden-2' THEN e.meta_value END) AS username,\n    MAX(CASE WHEN e.meta_key = 'hidden-3' THEN e.meta_value END) AS transaction_type,\n    MAX(CASE WHEN e.meta_key = '_forminator_user_ip' THEN e.meta_value END) AS user_ip\nFROM wp_frmt_form_entry_meta e\nGROUP BY e.entry_id\nORDER BY e.entry_id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "qy_listingTransactions2",
     "pageId": "Processing Deposit",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }
