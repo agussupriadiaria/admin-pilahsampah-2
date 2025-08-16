@@ -27,8 +27,12 @@ SELECT
 FROM tmp_grouped
 WHERE transaction_type = 'Transactions';
 
--- Hapus data yang sudah dipindahkan
+-- Hapus data yang sudah dipindahkan (hanya yang Transactions)
 DELETE FROM wp_frmt_form_entry_meta
-WHERE entry_id IN (SELECT entry_id FROM tmp_grouped);
+WHERE entry_id IN (
+	SELECT entry_id 
+	FROM tmp_grouped 
+	WHERE transaction_type = 'Transactions'
+);
 
 COMMIT;
