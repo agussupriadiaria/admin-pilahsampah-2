@@ -1,6 +1,6 @@
 USE u682594628_BxZ8n;
-INSERT INTO savedatabaru (barcode, time, date, jumlahbottle, saldopcs, saldo, transactioncode)
-SELECT sd.barcode, sd.time, sd.date, sd.jumlahbottle, sd.saldopcs, sd.saldo, sd.transactioncode
+INSERT INTO savedatabaru (date, jumlahbottle, saldo, transactioncode)
+SELECT sd.date, sd.jumlahbottle, sd.saldo, sd.transactioncode
 FROM savedata AS sd
 WHERE (sd.transactioncode, sd.saldo) IN (
 	SELECT transactioncode, MAX(saldo)

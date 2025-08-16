@@ -98,7 +98,7 @@
     }
   ],
   "dynamicTriggerPathList": [],
-  "enableClientSideSearch": true,
+  "enableClientSideSearch": false,
   "endOfData": false,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -107,7 +107,7 @@
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": true,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "uk05zn4gc3",

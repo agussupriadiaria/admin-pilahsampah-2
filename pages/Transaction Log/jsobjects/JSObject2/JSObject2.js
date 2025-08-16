@@ -21,11 +21,8 @@ export default {
 
 			const headers = lines[0].split(",").map(h => h.trim());
 			const expectedHeaders = [
-				"barcode",
-				"time",
 				"date",
 				"jumlahbottle",
-				"saldopcs",
 				"saldo",
 				"transactioncode"
 			];
@@ -47,11 +44,8 @@ export default {
 
 				try {
 					await qy_uploadData2.run({
-						barcode: row.barcode,
-						time: row.time,
 						date: row.date,
 						jumlahbottle: parseInt(row.jumlahbottle),
-						saldopcs: parseInt(row.saldopcs),
 						saldo: parseInt(row.saldo),
 						transactioncode: row.transactioncode
 					});
