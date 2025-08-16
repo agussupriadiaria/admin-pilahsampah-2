@@ -1,0 +1,4 @@
+SELECT
+  user_id, user_name, amount, voucher, status, inputdate
+FROM
+  transactions_wd
