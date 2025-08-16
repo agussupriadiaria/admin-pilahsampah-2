@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE transactions_wd\nSET voucher = CONCAT(\n    'pilah',\n    LPAD(FLOOR(RAND() * 10000), 4, '0'),  -- 4 digit random\n    DATE_FORMAT(NOW(), '%y'),             -- 2 digit tahun\n    DATE_FORMAT(NOW(), '%m')              -- 2 digit bulan\n);",
+      "body": "UPDATE transactions_wd\nSET \n    status = 'Success',\n    voucher = CONCAT(\n\t\t\t'pilah',\n\t\t\tLPAD(FLOOR(RAND() * 10000), 4, '0'), -- selalu 4 digit\n\t\t\tDATE_FORMAT(NOW(), '%y'),            -- 2 digit tahun\n\t\t\tDATE_FORMAT(NOW(), '%m')             -- 2 digit bulan (01–12)\n\t\t)\nWHERE status = 'Verify';\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
