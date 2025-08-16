@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "qy_listingWithdrawal2",
     "pageId": "Processing Withdrawal",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }
