@@ -1,0 +1,7 @@
+UPDATE transactions_wd
+SET voucher = CONCAT(
+    'pilah',
+    LPAD(FLOOR(RAND() * 10000), 4, '0'),  -- 4 digit random
+    DATE_FORMAT(NOW(), '%y'),             -- 2 digit tahun
+    DATE_FORMAT(NOW(), '%m')              -- 2 digit bulan
+);
