@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  *\nFROM\n  savedatabaru\nWHERE\n  transactioncode LIKE '%{{table_savedatabaru.searchText}}%'\nORDER BY\n  {{table_savedatabaru.sortOrder.column || 'no'}} {{table_savedatabaru.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"}}",
+      "body": "SELECT\n  date, jumlahbottle, saldo, transactioncode\nFROM\n  savedatabaru\nWHERE\n  transactioncode LIKE '%{{table_savedatabaru.searchText}}%'\nORDER BY\n  {{table_savedatabaru.sortOrder.column || 'no'}} {{table_savedatabaru.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

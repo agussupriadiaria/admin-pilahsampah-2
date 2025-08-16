@@ -32,16 +32,13 @@
     }
   },
   "columnOrder": [
-    "no",
-    "barcode",
-    "time",
+    "customColumn1",
     "date",
     "jumlahbottle",
-    "saldopcs",
     "saldo",
     "transactioncode"
   ],
-  "columnUpdatedAt": 1753975164334,
+  "columnUpdatedAt": 1755342234215,
   "columnWidthMap": {
     "customColumn1": 60,
     "no": 60
@@ -69,28 +66,19 @@
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.no.computedValue"
-    },
-    {
-      "key": "primaryColumns.barcode.computedValue"
-    },
-    {
-      "key": "primaryColumns.time.computedValue"
-    },
-    {
       "key": "primaryColumns.date.computedValue"
     },
     {
       "key": "primaryColumns.jumlahbottle.computedValue"
     },
     {
-      "key": "primaryColumns.saldopcs.computedValue"
-    },
-    {
       "key": "primaryColumns.saldo.computedValue"
     },
     {
       "key": "primaryColumns.transactioncode.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -144,34 +132,33 @@
   "parentRowSpace": 10,
   "primaryColumnId": "no",
   "primaryColumns": {
-    "barcode": {
-      "alias": "barcode",
+    "customColumn1": {
+      "alias": "no",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = table_savedatabaru.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"barcode\"])) :  currentRow[\"barcode\"] })()}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = table_savedatabaru.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentIndex+1)) : currentIndex+1 })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "barcode",
-      "index": 1,
+      "horizontalAlignment": "RIGHT",
+      "id": "customColumn1",
+      "index": 8,
       "isCellEditable": false,
       "isCellVisible": true,
-      "isDerived": false,
+      "isDerived": true,
       "isDisabled": false,
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "barcode",
+      "label": "no",
+      "labelColor": "#FFFFFF",
       "notation": "standard",
-      "originalId": "barcode",
+      "originalId": "customColumn1",
       "sticky": "",
-      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -248,40 +235,6 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "no": {
-      "alias": "no",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{(() => { const tableData = table_savedatabaru.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentIndex+1)) : currentIndex+1 })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "no",
-      "index": 0,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "no",
-      "notation": "standard",
-      "originalId": "no",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "saldo": {
       "alias": "saldo",
       "allowCellWrapping": false,
@@ -308,74 +261,6 @@
       "label": "saldo",
       "notation": "standard",
       "originalId": "saldo",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "saldopcs": {
-      "alias": "saldopcs",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = table_savedatabaru.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"saldopcs\"])) :  currentRow[\"saldopcs\"] })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "saldopcs",
-      "index": 5,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "saldopcs",
-      "notation": "standard",
-      "originalId": "saldopcs",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "time": {
-      "alias": "time",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = table_savedatabaru.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"time\"])) :  currentRow[\"time\"] })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "time",
-      "index": 2,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "time",
-      "notation": "standard",
-      "originalId": "time",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

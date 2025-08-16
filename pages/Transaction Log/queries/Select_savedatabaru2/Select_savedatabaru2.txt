@@ -1,5 +1,5 @@
 SELECT
-  *
+  date, jumlahbottle, saldo, transactioncode
 FROM
   savedatabaru
 WHERE

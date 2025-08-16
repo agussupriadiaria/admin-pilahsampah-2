@@ -32,6 +32,7 @@
     }
   },
   "columnOrder": [
+    "customColumn1",
     "entry_id",
     "user_id",
     "username",
@@ -41,10 +42,14 @@
     "date_created",
     "user_ip"
   ],
-  "columnUpdatedAt": 1755220016378,
+  "columnUpdatedAt": 1755344398117,
   "columnWidthMap": {
+    "customColumn1": 60,
+    "entry_id": 95,
+    "point": 91,
     "transaction_date": 176,
-    "transaction_type": 181
+    "transaction_type": 181,
+    "user_id": 95
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -90,6 +95,9 @@
     },
     {
       "key": "primaryColumns.date_created.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -125,6 +133,39 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
+    "customColumn1": {
+      "alias": "no",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentIndex+1)) : currentIndex+1 })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "RIGHT",
+      "id": "customColumn1",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "no",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "originalId": "customColumn1",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "date_created": {
       "alias": "date_created",
       "allowCellWrapping": false,
